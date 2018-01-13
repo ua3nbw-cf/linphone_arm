@@ -224,13 +224,13 @@ install_dependent_packages() {
 
 check_root
  
-DEBIAN_VERSION=`cat /etc/*-release | grep VERSION_ID | awk -F= '{print $2}' | sed -e 's/^"//' -e 's/"$//'`
-if [[ $DEBIAN_VERSION -ne 9 ]];then
-        display_message ""
-        display_message "This script is used to get installed on Debian GNU/Linux 9 (stretch)"
-        display_message ""
-    exit 1
-fi
+#DEBIAN_VERSION=`cat /etc/*-release | grep VERSION_ID | awk -F= '{print $2}' | sed -e 's/^"//' -e 's/"$//'`
+#if [[ $DEBIAN_VERSION -ne 9 ]];then
+#       display_message ""
+#       display_message "This script is used to get installed on Debian GNU/Linux 9 (stretch)"
+#      display_message ""
+#   exit 1
+#fi
 
 verifyFreeDiskSpace
 
