@@ -253,7 +253,7 @@ execute_command "pip install pystache" true "pip install pystache"
 execute_command "pip install six" true "pip install six"
 
 execute_command "cd externals/mbedtls" true "Compiling mbedtls"
-execute_command "cmake .  -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_PREFIX_PATH=/usr/local/lib" true "cmake"
+execute_command "cmake -DUSE_SHARED_MBEDTLS_LIBRARY=On . -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_PREFIX_PATH=/usr/local/lib" true "cmake"
 execute_command "make -j4" true "make"
 execute_command "make install" true "make install"
 echo -e "$Green \n Install mbedtls$Color_Off \n"
@@ -266,7 +266,7 @@ echo -e "$Green \n Install bcunit$Color_Off \n"
 cd ..
 execute_command "cd bctoolbox" true "Compiling bctoolbox"
 execute_command "cmake .  -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_PREFIX_PATH=/usr/local/lib  -DENABLE_SHARED=YES" true "cmake"
-execute_command "make -j4" true "make"
+execute_command "make" true "make"
 execute_command "make install" true "make install"
 echo -e "$Green \n Install bctoolbox$Color_Off \n"
 cd ..
