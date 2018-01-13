@@ -320,7 +320,8 @@ display_message ""
 
 
 echo -e "- For the user management, please  to $Cyan linphonec $Color_Off"
-
+amixer -c 0 -q set "Line Out"  100%+ unmute
+amixer -c 0 -q set "DAC"  100%+ unmute
 
 
 
