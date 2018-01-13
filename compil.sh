@@ -204,8 +204,8 @@ package_check_install() {
 }
 
 LINPHONE_ARM_DEPS_START=( apt-transport-https debconf-utils)
-LINPHONE_ARM_DEPS_PYTHON=( apt-utils  python-setuptools )
-LINPHONE_ARM_DEPS=( cmake libtool intltool doxygen graphviz libsqlite3-dev libantlr3c-dev antlr3 libopus-dev  libspeexdsp-dev libasound2-dev libxml2-dev )
+LINPHONE_ARM_DEPS_PYTHON=( apt-utils   )
+LINPHONE_ARM_DEPS=( cmake libtool intltool doxygen graphviz python-setuptools libsqlite3-dev libantlr3c-dev antlr3 libopus-dev  libspeexdsp-dev libasound2-dev libxml2-dev )
 
 install_dependent_packages() {
 
